@@ -118,7 +118,16 @@ final class Shelf: NSObject, NSApplicationDelegate, NSMenuDelegate {
             url.pathExtension == "app" && url.lastPathComponent.lowercased().hasPrefix("proton")
                 && Bundle(url: url)?.bundleIdentifier != Bundle.main.bundleIdentifier
         }
-        return apps.sorted { displayName($0).localizedStandardCompare(displayName($1)) == .orderedAscending }
+        // Alphabetical, except Pass goes last: it's usually the one not running.
+        return apps.sorted { a, b in
+            let aLast = isPass(a), bLast = isPass(b)
+            if aLast != bLast { return bLast }
+            return displayName(a).localizedStandardCompare(displayName(b)) == .orderedAscending
+        }
+    }
+
+    private func isPass(_ url: URL) -> Bool {
+        displayName(url).lowercased().contains("pass")
     }
 
     private func displayName(_ url: URL) -> String {

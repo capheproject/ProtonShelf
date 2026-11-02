@@ -9,7 +9,7 @@ A tiny macOS menu bar app: one atom icon that drops down a list of your installe
 
 Any app in `/Applications` or `~/Applications` whose name starts with "Proton" is listed automatically.
 
-Pair it with a menu bar hider (Hidden Bar, Ice, Bartender) to tuck the Proton apps' own icons away.
+It works best alongside a menu bar manager like [Thaw](https://www.getthaw.app) or Bartender. Put the Proton apps' own icons in its **Always Hidden** section and keep only ProtonShelf visible, so one icon replaces four or five (see step 3 under Install).
 
 <p align="center"><img src="docs/screenshot.png" alt="ProtonShelf menu listing Proton apps" width="320"></p>
 
@@ -24,6 +24,7 @@ Pair it with a menu bar hider (Hidden Bar, Ice, Bartender) to tuck the Proton ap
      ```
 
    You only need to do this once. After that it opens like any other app.
+3. Recommended: tidy up the menu bar with [Thaw](https://www.getthaw.app) (or Bartender, Ice, or a similar app). In its settings, drag the icons of Proton VPN, Pass, Drive and Mail Bridge into the **Always Hidden** section and leave ProtonShelf visible. The Proton apps keep running in the background, and you reach all of them from ProtonShelf.
 
 Runs on Apple silicon and Intel Macs with macOS 15 or later.
 

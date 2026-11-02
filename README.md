@@ -19,3 +19,7 @@ Pair it with a menu bar hider (Hidden Bar, Ice, Bartender) to tuck the Proton ap
 ```
 
 Requires macOS 15+ and Swift 6.
+
+## License
+
+MIT
